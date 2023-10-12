@@ -50,17 +50,12 @@ const fruits = [
   },
 ];
 
-fruits.forEach((fruit) => console.log(fruit.name));
-fruits.forEach((fruit) => console.log(fruit.colors));
-fruits.forEach((fruit) => console.log(fruit.shape));
-fruits.forEach((fruit) => console.log(fruit.bitter));
-fruits.forEach((fruit) => console.log(fruit.berry));
+fruits.forEach((fruit) => {
+  console.log(fruit.name);
+  fruit.colors.forEach((fruity) => {
+    console.log(fruity);
+  });
+});
 
 const current1 = fruits.filter((fruit) => fruit.colors.includes("red"));
 console.log(current1);
-const current2 = fruits.filter((fruit) => fruit.shape.includes("round"));
-console.log(current2);
-const current3 = fruits.filter((fruit) => fruit.bitter === true);
-console.log(current3);
-const current4 = fruits.filter((fruit) => fruit.berry === false);
-console.log(current4);
